@@ -1,9 +1,10 @@
 import { Menu, X, Code, Users, Calendar, Award, Mail } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import AboutSection from './components/AboutUs';
+import AboutSection from "./components/Aboutus";
+import TeamSection from './components/TeamSection';
+import ContactSection from './components/ContactSection';
 
-// Events Section
 const EventsSection = () => {
   const events = [
     { title: 'Hackathon 2024', date: 'Nov 15-17', icon: Code },
@@ -31,57 +32,6 @@ const EventsSection = () => {
               </div>
             );
           })}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Team Section
-const TeamSection = () => {
-  return (
-    <section id="team" className="min-h-screen flex items-center bg-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-          Our <span className="text-sky-500">Team</span>
-        </h2>
-        <div className="text-center">
-          <p className="text-xl text-slate-400 mb-8">
-            Meet the passionate individuals leading our chapter
-          </p>
-          <div className="bg-slate-800/50 p-12 rounded-xl border border-slate-700">
-            <Users className="w-16 h-16 text-purple-500 mx-auto mb-4" />
-            <p className="text-slate-300">Team member cards will be added here</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Contact Section
-const ContactSection = () => {
-  return (
-    <section id="contact" className="min-h-screen flex items-center bg-slate-950 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-          Get in <span className="text-amber-500">Touch</span>
-        </h2>
-        <div className="max-w-2xl mx-auto bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-          <div className="flex items-center justify-center mb-6">
-            <Mail className="w-12 h-12 text-sky-500" />
-          </div>
-          <p className="text-center text-slate-300 mb-8">
-            Have questions or want to join our chapter? Reach out to us!
-          </p>
-          <div className="text-center space-y-4">
-            <p className="text-slate-400">
-              <span className="font-bold text-white">Email:</span> acm@yourcollege.edu
-            </p>
-            <p className="text-slate-400">
-              <span className="font-bold text-white">Follow us:</span> @acm_chapter
-            </p>
-          </div>
         </div>
       </div>
     </section>
