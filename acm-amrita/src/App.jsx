@@ -1,36 +1,7 @@
-import React, { useState } from 'react';
 import { Menu, X, Code, Users, Calendar, Award, Mail } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-
-// About Section
-const AboutSection = () => {
-  return (
-    <section id="about" className="min-h-screen flex items-center bg-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-          About <span className="text-purple-500">Us</span>
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-            <Users className="w-12 h-12 text-sky-500 mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-            <p className="text-slate-300 leading-relaxed">
-              We are dedicated to fostering a community of passionate computer science students. Our chapter provides opportunities for learning, networking, and professional development in the field of computing.
-            </p>
-          </div>
-          <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-            <Code className="w-12 h-12 text-purple-500 mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">What We Do</h3>
-            <p className="text-slate-300 leading-relaxed">
-              From hackathons to workshops, guest lectures to coding competitions, we organize diverse events that help students develop technical skills and connect with industry professionals.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+import AboutSection from './components/AboutUs';
 
 // Events Section
 const EventsSection = () => {
