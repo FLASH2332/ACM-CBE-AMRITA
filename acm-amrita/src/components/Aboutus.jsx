@@ -1,4 +1,4 @@
-
+import Campus from "../assets/images/amrita2.jpg";
 
 // About Section
 const AboutSection = () => {
@@ -58,7 +58,7 @@ const AboutSection = () => {
               {/* Building illustration placeholder */}
               <div className="w-full h-[450px] bg-slate-900 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/src/assets/images/amrita2.jpg" 
+                  src={Campus}
                   alt="Amrita campus building with students"
                   className="w-full h-full object-fill rounded-lg"
                 />
