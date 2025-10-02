@@ -1,99 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Code, Users, Calendar, Award, Mail } from 'lucide-react';
-
-// Color Palette & Theme
-const theme = {
-  primary: '#0EA5E9', // Sky blue
-  secondary: '#8B5CF6', // Purple
-  accent: '#F59E0B', // Amber
-  dark: '#0F172A', // Slate 900
-  darker: '#020617', // Slate 950
-  light: '#F8FAFC', // Slate 50
-  gray: '#64748B' // Slate 500
-};
-
-// Navbar Component
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Events', href: '#events' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' }
-  ];
-
-  return (
-    <nav className="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 shadow-lg border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Code className="w-8 h-8 text-sky-500" />
-            <span className="text-xl font-bold text-white">ACM Chapter</span>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-slate-300 hover:text-sky-500 transition-colors duration-200 font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-300 hover:text-white"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-slate-300 hover:text-sky-500 transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-// Hero Section
-const HeroSection = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          Welcome to <span className="text-sky-500">ACM Chapter</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto">
-          Empowering students through technology, innovation, and collaboration
-        </p>
-        <button className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg shadow-sky-500/50">
-          Join Us Today
-        </button>
-      </div>
-    </section>
-  );
-};
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 // About Section
 const AboutSection = () => {
@@ -212,9 +120,9 @@ const ContactSection = () => {
 // Main App Component
 export default function App() {
   return (
-    <div className="bg-slate-950">
+    <div className="bg-slate-950 selection:bg-sky-600 selection:text-white">
       <Navbar />
-      <HeroSection />
+      <Hero />
       <AboutSection />
       <EventsSection />
       <TeamSection />

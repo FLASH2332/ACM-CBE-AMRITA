@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+:root {
+    --primary-color: #0EA5E9;
+    --secondary-color: #8B5CF6;
+    --accent-color: #F59E0B;
+    --dark-color: #0F172A;
+    --darker-color: #020617;
+    --light-color: #F8FAFC;
+    --gray-color: #64748B;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;  
+  height: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 8px;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Firefox support */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #0ea5e9 #0f172a;
+  }
+}
