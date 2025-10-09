@@ -4,37 +4,37 @@ const teamData = [
   {
     name: "Aadithyaa Eeswaran",
     role: "Chairperson",
-    image: "/src/assets/images/members/2024-25/aadhitya.jpeg",
+    image: "/members/2024-25/aadhitya.jpeg",
     social: { linkedin: "https://www.linkedin.com/in/aadithyaa-eeswaran/" }
   },
   {
     name: "Leela Mahalakshmi Marupuru",
     role: "Vice Chairperson",
-    image: "/src/assets/images/members/2025-26/leela-m.jpg",
+    image: "/members/2025-26/leela-m.jpg",
     social: { linkedin: "https://www.linkedin.com/in/leela-m-336334301/" }
   },
   {
     name: "Sarath Chandra",
     role: "Secretary",
-    image: "/src/assets/images/members/2025-26/sarath-chandra.jpg",
+    image: "/members/2025-26/sarath-chandra.jpg",
     social: { linkedin: "https://www.linkedin.com/in/sarathcx/" }
   },
   {
     name: "Sanyam Bhardwaj",
     role: "Treasurer",
-    image: "/src/assets/images/members/2024-25/sanyam.jpeg",
+    image: "/members/2024-25/sanyam.jpeg",
     social: { linkedin: "https://www.linkedin.com/in/sanyam-bhardwaj-04b2a4264/" }
   },
   {
     name: "Adithya Menon R",
     role: "Web Master",
-    image: "/src/assets/images/members/2025-26/adithya-menon.jpg",
+    image: "/members/2025-26/adithya-menon.jpg",
     social: { linkedin: "https://www.linkedin.com/in/adithya-menon-r" }
   },
   {
     name: "Midhunan Vijendra Prabhaharan",
     role: "Event Management Head",
-    image: "/src/assets/images/members/2025-26/midhunan.jpg",
+    image: "/members/2025-26/midhunan.jpg",
     social: { linkedin: "https://www.linkedin.com/in/midhunan-vijendra-prabhaharan/" }
   }
 ];
@@ -123,7 +123,7 @@ const TeamSection = () => {
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
                 <img
-                  src="/src/assets/images/members/2024-25/bindu_k_r.png"
+                  src="/members/bindu_k_r.png"
                   alt="Faculty Advisor 1"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -143,7 +143,7 @@ const TeamSection = () => {
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
                 <img
-                  src="/src/assets/images/aarthi-r_asst-professor_cse_engineering_coimbatore.jpg"
+                  src="/members/aarthi-r_asst-professor_cse_engineering_coimbatore.jpg"
                   alt="Faculty Advisor"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -163,7 +163,7 @@ const TeamSection = () => {
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
                 <img
-                  src="/src/assets/images/arti.jpeg"
+                  src="/members/arti.jpeg"
                   alt="Faculty Advisor 3"
                   className="w-full h-full object-cover"
                   onError={(e) => {
