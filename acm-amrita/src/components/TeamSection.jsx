@@ -1,89 +1,45 @@
-import { useState } from 'react';
-import { Users, Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 
-const teamData = {
-  "2024-25": [
-    {
-      name: "Aadhitya",
-      role: "President",
-      image: "/src/assets/images/members/2024-25/aadhitya.jpeg",
-      social: { linkedin: "#", github: "#", email: "mailto:aadhitya@acm.com" }
-    },
-    {
-      name: "Abhinav R",
-      role: "Vice President",
-      image: "/src/assets/images/members/2024-25/abhinav_r.jpeg",
-      social: { linkedin: "#", github: "#", email: "mailto:abhinav@acm.com" }
-    },
-    {
-      name: "Abineha",
-      role: "Secretary",
-      image: "/src/assets/images/members/2024-25/abineha.png",
-      social: { linkedin: "#", github: "#", email: "mailto:abineha@acm.com" }
-    },
-    {
-      name: "Ashwin Narayanan S",
-      role: "Technical Lead",
-      image: "/src/assets/images/members/2024-25/ashwin_narayanan_s.jpg",
-      social: { linkedin: "#", github: "#", email: "mailto:ashwin@acm.com" }
-    },
-    {
-      name: "Bindu K R",
-      role: "Events Coordinator",
-      image: "/src/assets/images/members/2024-25/bindu_k_r.png",
-      social: { linkedin: "#", github: "#", email: "mailto:bindu@acm.com" }
-    },
-    {
-      name: "Sanyam",
-      role: "Treasurer",
-      image: "/src/assets/images/members/2024-25/sanyam.jpeg",
-      social: { linkedin: "#", github: "#", email: "mailto:sanyam@acm.com" }
-    }
-  ],
-  "2023-24": [
-    {
-      name: "Akash S",
-      role: "President",
-      image: "/src/assets/images/members/2023-24/akash_s.jpg",
-      social: { linkedin: "#", github: "#" }
-    },
-    {
-      name: "Ananya Duvvuri",
-      role: "Vice President",
-      image: "/src/assets/images/members/2023-24/ananya_duvvuri.jpg",
-      social: { linkedin: "#", github: "#" }
-    },
-    {
-      name: "Aparna A",
-      role: "Secretary",
-      image: "/src/assets/images/members/2023-24/aparna_a.jpg",
-      social: { linkedin: "#", github: "#" }
-    },
-    {
-      name: "Kishore S",
-      role: "Technical Lead",
-      image: "/src/assets/images/members/2023-24/kishore_s.jpg",
-      social: { linkedin: "#", github: "#" }
-    },
-    {
-      name: "Pradeep Karthik",
-      role: "Events Lead",
-      image: "/src/assets/images/members/2023-24/pradeep_karthik.jpg",
-      social: { linkedin: "#", github: "#" }
-    },
-    {
-      name: "Praveen Kumar",
-      role: "Outreach Lead",
-      image: "/src/assets/images/members/2023-24/praveen_kumar.jpg",
-      social: { linkedin: "#", github: "#" }
-    }
-  ]
-};
+const teamData = [
+  {
+    name: "Aadithyaa Eeswaran",
+    role: "Chairperson",
+    image: "/src/assets/images/members/2024-25/aadhitya.jpeg",
+    social: { linkedin: "https://www.linkedin.com/in/aadithyaa-eeswaran/" }
+  },
+  {
+    name: "Leela Mahalakshmi Marupuru",
+    role: "Vice Chairperson",
+    image: "/src/assets/images/members/2025-26/leela-m.jpg",
+    social: { linkedin: "https://www.linkedin.com/in/leela-m-336334301/" }
+  },
+  {
+    name: "Sarath Chandra",
+    role: "Secretary",
+    image: "/src/assets/images/members/2025-26/sarath-chandra.jpg",
+    social: { linkedin: "https://www.linkedin.com/in/sarathcx/" }
+  },
+  {
+    name: "Sanyam Bhardwaj",
+    role: "Treasurer",
+    image: "/src/assets/images/members/2024-25/sanyam.jpeg",
+    social: { linkedin: "https://www.linkedin.com/in/sanyam-bhardwaj-04b2a4264/" }
+  },
+  {
+    name: "Adithya Menon R",
+    role: "Web Master",
+    image: "/src/assets/images/members/2025-26/adithya-menon.jpg",
+    social: { linkedin: "https://www.linkedin.com/in/adithya-menon-r" }
+  },
+  {
+    name: "Midhunan Vijendra Prabhaharan",
+    role: "Event Management Head",
+    image: "/src/assets/images/members/2025-26/midhunan.jpg",
+    social: { linkedin: "https://www.linkedin.com/in/midhunan-vijendra-prabhaharan/" }
+  }
+];
 
 const TeamSection = () => {
-  const [selectedYear, setSelectedYear] = useState("2024-25");
-  const years = Object.keys(teamData);
-
   return (
     <section id="team" className="min-h-screen flex items-center bg-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -94,26 +50,8 @@ const TeamSection = () => {
           Meet the passionate individuals leading our chapter
         </p>
 
-        <div className="flex justify-center gap-4 mb-12">
-          {years.map((year) => (
-            <button
-              key={year}
-              onClick={() => setSelectedYear(year)}
-              className={`
-                px-6 py-2 rounded-lg font-semibold transition-all duration-300
-                ${selectedYear === year
-                  ? "bg-sky-600 text-white shadow-lg shadow-sky-500/30"
-                  : "bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white border border-slate-700"
-                }
-              `}
-            >
-              {year}
-            </button>
-          ))}
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamData[selectedYear].map((member, idx) => (
+          {teamData.map((member, idx) => (
             <div
               key={idx}
               className="group bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden hover:border-sky-500 transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 hover:-translate-y-2"
@@ -174,21 +112,68 @@ const TeamSection = () => {
 
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-white mb-6">
-            Faculty <span className="text-amber-500">Advisor</span>
+            Faculty <span className="text-amber-500">Advisors</span>
           </h3>
-          <div className="max-w-md mx-auto bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-amber-500 transition-all duration-300">
-            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
-              <img
-                src="/src/assets/images/aarthi-r_asst-professor_cse_engineering_coimbatore.jpg"
-                alt="Faculty Advisor"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect fill='%231e293b' width='128' height='128' rx='64'/%3E%3Ctext fill='%2394a3b8' font-size='40' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E%3F%3C/text%3E%3C/svg%3E";
-                }}
-              />
-            </div>
-            <h4 className="text-xl font-bold text-white mb-1">Dr. Aarthi R</h4>
-            <p className="text-amber-400 font-medium">Assistant Professor, CSE</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <a 
+              href="hhttps://www.linkedin.com/in/bindu-k-r-6373113/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-amber-500 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1"
+            >
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
+                <img
+                  src="/src/assets/images/members/2024-25/bindu_k_r.png"
+                  alt="Faculty Advisor 1"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect fill='%231e293b' width='128' height='128' rx='64'/%3E%3Ctext fill='%2394a3b8' font-size='40' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E%3F%3C/text%3E%3C/svg%3E";
+                  }}
+                />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-1">Bindu K. R.</h4>
+              <p className="text-amber-400 font-medium">Assistant Professor, School of Computing, Coimbatore</p>
+            </a>
+
+            <a 
+              href="https://in.linkedin.com/in/aarthi-r-3b76b235" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-amber-500 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1"
+            >
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
+                <img
+                  src="/src/assets/images/aarthi-r_asst-professor_cse_engineering_coimbatore.jpg"
+                  alt="Faculty Advisor"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect fill='%231e293b' width='128' height='128' rx='64'/%3E%3Ctext fill='%2394a3b8' font-size='40' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E%3F%3C/text%3E%3C/svg%3E";
+                  }}
+                />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-1">Dr. Aarthi R</h4>
+              <p className="text-amber-400 font-medium">Assistant Professor, School of Computing, Coimbatore</p>
+            </a>
+
+            <a 
+              href="https://www.linkedin.com/in/dr-arti-anuragi-72a187a3/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-amber-500 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1"
+            >
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-slate-700 overflow-hidden">
+                <img
+                  src="/src/assets/images/arti.jpeg"
+                  alt="Faculty Advisor 3"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect fill='%231e293b' width='128' height='128' rx='64'/%3E%3Ctext fill='%2394a3b8' font-size='40' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E%3F%3C/text%3E%3C/svg%3E";
+                  }}
+                />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-1">Dr. Anuragi Arti Narayandas</h4>
+              <p className="text-amber-400 font-medium">Assistant Professor, School of Computing, Coimbatore</p>
+            </a>
           </div>
         </div>
       </div>

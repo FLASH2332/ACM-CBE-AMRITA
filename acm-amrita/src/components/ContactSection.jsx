@@ -44,13 +44,13 @@ const ContactSection = () => {
                   <h3 className="text-white font-bold mb-2">Email Us</h3>
                   <p className="text-slate-400 text-sm mb-2">Drop us a line anytime</p>
                   <a href="mailto:acm@xyz.edu" className="text-sky-500 hover:text-sky-400 transition-colors">
-                    acm@xyz.edu
+                    acmsc@cb.amrita.edu
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            {/* <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-500/10 p-3 rounded-lg">
                   <Phone className="w-6 h-6 text-purple-500" />
@@ -63,7 +63,7 @@ const ContactSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-amber-500 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20">
               <div className="flex items-start space-x-4">
@@ -83,16 +83,16 @@ const ContactSection = () => {
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-white font-bold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="bg-slate-700/50 p-3 rounded-lg hover:bg-sky-500/20 hover:border-sky-500 border border-transparent transition-all duration-300 group">
+                {/* <a href="#" className="bg-slate-700/50 p-3 rounded-lg hover:bg-sky-500/20 hover:border-sky-500 border border-transparent transition-all duration-300 group">
                   <Twitter className="w-5 h-5 text-slate-400 group-hover:text-sky-500 transition-colors" />
-                </a>
-                <a href="#" className="bg-slate-700/50 p-3 rounded-lg hover:bg-purple-500/20 hover:border-purple-500 border border-transparent transition-all duration-300 group">
+                </a> */}
+                <a href="https://www.instagram.com/acmamritacbe/" className="bg-slate-700/50 p-3 rounded-lg hover:bg-purple-500/20 hover:border-purple-500 border border-transparent transition-all duration-300 group">
                   <Instagram className="w-5 h-5 text-slate-400 group-hover:text-purple-500 transition-colors" />
                 </a>
-                <a href="#" className="bg-slate-700/50 p-3 rounded-lg hover:bg-slate-500/20 hover:border-slate-500 border border-transparent transition-all duration-300 group">
+                <a href="https://github.com/acm-avv" className="bg-slate-700/50 p-3 rounded-lg hover:bg-slate-500/20 hover:border-slate-500 border border-transparent transition-all duration-300 group">
                   <Github className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" />
                 </a>
-                <a href="#" className="bg-slate-700/50 p-3 rounded-lg hover:bg-sky-500/20 hover:border-sky-500 border border-transparent transition-all duration-300 group">
+                <a href="https://www.linkedin.com/in/acm-amrita-vishwa-vidyapeetham/" className="bg-slate-700/50 p-3 rounded-lg hover:bg-sky-500/20 hover:border-sky-500 border border-transparent transition-all duration-300 group">
                   <Linkedin className="w-5 h-5 text-slate-400 group-hover:text-sky-500 transition-colors" />
                 </a>
               </div>

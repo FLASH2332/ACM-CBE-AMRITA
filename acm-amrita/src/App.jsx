@@ -7,9 +7,8 @@ import ContactSection from './components/ContactSection';
 
 const EventsSection = () => {
   const events = [
-    { title: 'Hackathon 2024', date: 'Nov 15-17', icon: Code },
-    { title: 'Tech Talk Series', date: 'Every Friday', icon: Users },
-    { title: 'Coding Competition', date: 'Dec 5', icon: Award }
+    { title: 'Tech Talk Series', date: 'TBD', icon: Users },
+    { title: 'Winter of Code 2025', date: 'TBD', icon: Award },
   ];
 
   return (
@@ -18,11 +17,11 @@ const EventsSection = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
           Upcoming <span className="text-amber-500">Events</span>
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {events.map((event, idx) => {
             const Icon = event.icon;
             return (
-              <div key={idx} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-sky-500 transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20">
+              <div key={idx} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-sky-500 transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 w-full md:w-80">
                 <Icon className="w-10 h-10 text-sky-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
                 <div className="flex items-center text-slate-400">
@@ -53,7 +52,7 @@ export default function App() {
       <footer className="bg-slate-900 border-t border-slate-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-400">
-            © 2024 ACM Student Chapter. All rights reserved.
+            © 2025 ACM Student Chapter. All rights reserved.
           </p>
         </div>
       </footer>
