@@ -34,8 +34,20 @@ const teamData = [
   {
     name: "Midhunan Vijendra Prabhaharan",
     role: "Event Management Head",
-    image: "/members/2025-26/midhunan.jpg",
+    image: "/members/2025-26/midhunan.JPG",
     social: { linkedin: "https://www.linkedin.com/in/midhunan-vijendra-prabhaharan/" }
+  },
+  {
+    name: "Karthik Saiharsh Illindala",
+    role: "Design & PR Head",
+    image: "/members/2025-26/karthik.JPG",
+    social: { linkedin: "https://www.linkedin.com/in/karthik-saiharsh-illindala-7a60a4354/" }
+  },
+  {
+    name: "Vasudev Kishor",
+    role: "Media Head",
+    image: "/members/2025-26/vasudev.JPG",
+    social: { linkedin: "https://www.linkedin.com/in/vasudevkishor/" }
   }
 ];
 
