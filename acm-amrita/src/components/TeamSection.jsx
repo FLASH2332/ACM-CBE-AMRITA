@@ -40,13 +40,13 @@ const teamData = [
   {
     name: "Karthik Saiharsh Illindala",
     role: "Design & PR Head",
-    image: "/members/2025-26/karthik.JPG",
+    image: "/members/2025-26/karthik.jpg",
     social: { linkedin: "https://www.linkedin.com/in/karthik-saiharsh-illindala-7a60a4354/" }
   },
   {
     name: "Vasudev Kishor",
     role: "Media Head",
-    image: "/members/2025-26/vasudev.JPG",
+    image: "/members/2025-26/vasudev.jpg",
     social: { linkedin: "https://www.linkedin.com/in/vasudevkishor/" }
   }
 ];
